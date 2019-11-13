@@ -1,0 +1,25 @@
+.mainFrame {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-gap: 10px; */
+    width: fit-content;
+    /* height: 450px; */
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.11);
+
+}
+
+.winFrame {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.mainFrame>div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 165);
+    font-size: 50px;
+    margin: 10px;
+    border-radius: 10px;
+}

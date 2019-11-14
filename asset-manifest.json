@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/fifteen-puzzle/static/css/main.53981119.chunk.css",
+    "main.js": "/fifteen-puzzle/static/js/main.cd99a3da.chunk.js",
+    "main.js.map": "/fifteen-puzzle/static/js/main.cd99a3da.chunk.js.map",
+    "runtime-main.js": "/fifteen-puzzle/static/js/runtime-main.05b9d7d5.js",
+    "runtime-main.js.map": "/fifteen-puzzle/static/js/runtime-main.05b9d7d5.js.map",
+    "static/js/2.d28a570b.chunk.js": "/fifteen-puzzle/static/js/2.d28a570b.chunk.js",
+    "static/js/2.d28a570b.chunk.js.map": "/fifteen-puzzle/static/js/2.d28a570b.chunk.js.map",
+    "index.html": "/fifteen-puzzle/index.html",
+    "precache-manifest.abc304136926cb6a9775fe9c9bd83918.js": "/fifteen-puzzle/precache-manifest.abc304136926cb6a9775fe9c9bd83918.js",
+    "service-worker.js": "/fifteen-puzzle/service-worker.js",
+    "static/css/main.53981119.chunk.css.map": "/fifteen-puzzle/static/css/main.53981119.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05b9d7d5.js",
+    "static/js/2.d28a570b.chunk.js",
+    "static/css/main.53981119.chunk.css",
+    "static/js/main.cd99a3da.chunk.js"
+  ]
+}

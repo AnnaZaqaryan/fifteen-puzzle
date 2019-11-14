@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
-
 import './GameFrame.css';
 import { getIndexOfElement, getSiblings, findItem, moveItems } from '../utils/Utils';
 import BlunkDiv from './BlunkDiv';
-
-
 import { chunk, includes, shuffle, } from 'lodash';
-// import _ from 'lodash';
+
 export default class GameFrame extends Component {
 
 
@@ -53,7 +50,6 @@ export default class GameFrame extends Component {
             });
             this.checkWinCondition();
         }
-
     }
 
     checkWinCondition = () => {
@@ -65,7 +61,6 @@ export default class GameFrame extends Component {
     }
     startAgain = () => {
         const shuffledArray = shuffle(GameFrame.INITIAL_ARRAY);
-
         const elements = chunk(shuffledArray, 4);
 
         this.setState({
@@ -82,7 +77,6 @@ export default class GameFrame extends Component {
                 if (item === GameFrame.BLUNK) {
                     jsxElements.push(<BlunkDiv key={item} onClick={this.moveElement} >{item}</BlunkDiv>);
                 } else {
-
                     jsxElements.push(<div key={item} onClick={this.moveElement} >{item}</div>);
                 }
             }
@@ -92,20 +86,19 @@ export default class GameFrame extends Component {
     }
 
     render() {
-
         if (this.state.win) {
             return (
                 <div className="winFrame">
-                    <div>Win !!!! with move count {this.state.moveCount}</div>
-                    <button onClick={this.startAgain}>Start again</button>
+                    <div> Win !!!  Move count {this.state.moveCount}</div>
+                    <button className="grnButton" onClick={this.startAgain}>Start again</button>
                 </div>
             )
         } else {
             let jsxElements = this.getDivsFromArray();
             return (
-                <div>
-                    <button onClick={this.startAgain}>Refresh</button>
-                    <div>Count of Moves  {this.state.moveCount}</div>
+                <div className="Refresh">
+                    <button className="grnButton" onClick={this.startAgain}>Refresh</button>
+                    <div> Count of Moves  {this.state.moveCount}</div>
                     <div className="mainFrame">
                         {jsxElements}
                     </div>

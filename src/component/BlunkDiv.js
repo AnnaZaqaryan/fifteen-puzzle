@@ -4,7 +4,8 @@ export default function BlunkDiv(props) {
 
     return (
         <div style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.11)' }}>
+            backgroundColor: '#84e19b'
+        }}>
             {props.children}
         </div>
     )

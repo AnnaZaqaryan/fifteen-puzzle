@@ -1,12 +1,9 @@
 .mainFrame {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* grid-gap: 10px; */
+    grid-template-columns: repeat(4, 1fr);
     width: fit-content;
-    /* height: 450px; */
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.11);
-
+    background-color: #84e19b;
 }
 
 .winFrame {
@@ -15,10 +12,29 @@
     margin: 0 auto;
 }
 
+.grnButton {
+    border: solid 2px #6aaf7a;
+    background-color: #84e19b;
+    border-radius: 8px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 140px;
+    height: 30px;
+}
+
+.grnButton:hover {
+    background-color: #6aaf7a;
+}
+
+.Refresh>div {
+    margin-top: 20px;
+}
+
 .mainFrame>div {
     width: 100px;
     height: 100px;
-    background-color: rgb(255, 255, 165);
+    background-color: #6aaf7a;
     font-size: 50px;
     margin: 10px;
     border-radius: 10px;

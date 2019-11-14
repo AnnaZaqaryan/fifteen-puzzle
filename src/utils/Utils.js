@@ -17,7 +17,6 @@ export function getIndexOfElement(array, element) {
     throw new Error("no element fount " + element);
 }
 
-
 export function getSiblings(array, x, y) {
     const leng = array.length;
     let coor = [{ x: x, y: y + 1 }, { x: x, y: y - 1 }, { x: x + 1, y: y }, { x: x - 1, y: y }];
@@ -25,7 +24,6 @@ export function getSiblings(array, x, y) {
     coor = coor.filter(e => e.y >= 0 && e.y < leng);
     return coor;
 }
-
 
 export function moveItems(arra, firstCoor, secondCoor) {
 

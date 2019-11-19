@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './GameFrame.css';
-import { getIndexOfElement, getSiblings, findItem, moveItems } from '../utils/Utils';
-import BlunkDiv from './BlunkDiv';
-import { chunk, includes, shuffle, } from 'lodash';
+import { getIndexOfElement, getSiblings, moveItems } from '../utils/Utils';
+import { chunk, shuffle, } from 'lodash';
 
 export default class GameFrame extends Component {
 
@@ -14,7 +13,7 @@ export default class GameFrame extends Component {
         9, 10, 11, 12,
         13, 14, GameFrame.BLUNK, 15];
 
-    static WIN_ARRAY = [
+    static WIN_ARRAY = [ 
         [1, 2, 3, 4],
         [5, 6, 7, 8],
         [9, 10, 11, 12],
@@ -38,10 +37,9 @@ export default class GameFrame extends Component {
         let blunkCoor = getIndexOfElement(elements, GameFrame.BLUNK);
         const siblings = getSiblings(elements, coord.x, coord.y);
 
-        const isblukSibling = includes(siblings.map(e => JSON.stringify(e)), JSON.stringify(blunkCoor));
+        const isblukSibling = siblings.map(e => JSON.stringify(e)).includes(JSON.stringify(blunkCoor));
         if (isblukSibling) {
             moveItems(elements, coord, blunkCoor);
-
             this.setState((oldState, oldProps) => {
                 return {
                     elem: elements,
@@ -75,7 +73,10 @@ export default class GameFrame extends Component {
         for (let row of this.state.elem) {
             for (let item of row) {
                 if (item === GameFrame.BLUNK) {
-                    jsxElements.push(<BlunkDiv key={item} onClick={this.moveElement} >{item}</BlunkDiv>);
+                    let emptyDiv = <div key={item} style={{
+                        backgroundColor: '#84e19b'
+                    }}></div>
+                    jsxElements.push(emptyDiv);
                 } else {
                     jsxElements.push(<div key={item} onClick={this.moveElement} >{item}</div>);
                 }

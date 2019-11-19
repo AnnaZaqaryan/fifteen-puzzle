@@ -1,12 +1,13 @@
+import GameFrame from "../component/GameFrame";
 
 
 export function getIndexOfElement(array, element) {
-
+    
     const length = array.length;
 
     for (let i = 0; i < length; i++) {
         for (let j = 0; j < length; j++) {
-            if (array[i][j].toString() === element.toString()) {
+            if (array[i][j] == element) {
                 return {
                     x: i,
                     y: j
@@ -14,15 +15,14 @@ export function getIndexOfElement(array, element) {
             }
         }
     }
-    throw new Error("no element fount " + element);
 }
 
 export function getSiblings(array, x, y) {
     const leng = array.length;
-    let coor = [{ x: x, y: y + 1 }, { x: x, y: y - 1 }, { x: x + 1, y: y }, { x: x - 1, y: y }];
-    coor = coor.filter(e => e.x >= 0 && e.x < leng);
-    coor = coor.filter(e => e.y >= 0 && e.y < leng);
-    return coor;
+    let siblings = [{ x: x, y: y + 1 }, { x: x, y: y - 1 }, { x: x + 1, y: y }, { x: x - 1, y: y }];
+    siblings = siblings.filter(e => e.x >= 0 && e.x < leng);
+    siblings = siblings.filter(e => e.y >= 0 && e.y < leng);
+    return siblings;
 }
 
 export function moveItems(arra, firstCoor, secondCoor) {

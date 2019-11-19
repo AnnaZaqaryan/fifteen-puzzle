@@ -1,5 +1,3 @@
-import GameFrame from "../component/GameFrame";
-
 
 export function getIndexOfElement(array, element) {
     

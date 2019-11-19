@@ -40,7 +40,7 @@ export default class GameFrame extends Component {
         const isblukSibling = siblings.map(e => JSON.stringify(e)).includes(JSON.stringify(blunkCoor));
         if (isblukSibling) {
             moveItems(elements, coord, blunkCoor);
-            this.setState((oldState, oldProps) => {
+            this.setState((oldState) => {
                 return {
                     elem: elements,
                     moveCount: oldState.moveCount + 1
